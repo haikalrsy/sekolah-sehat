@@ -15,6 +15,45 @@
 body {
     font-size: 18px;
     background-color: #f0f0f0;
+    .container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fcfcfd;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap; 
+  color: gray;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
 }
 
 /* Gaya untuk tablet (max-width: 768px) */
@@ -24,6 +63,45 @@ body {
         background-color: #e0e0e0;
         font-family: "Playfair Display", serif;
   font-weight: 400px;
+  .container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fcfcfd;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap; 
+  color: gray;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
     }
 }
 
@@ -34,6 +112,45 @@ body {
         background-color: #d0d0d0;
         font-family: "Playfair Display", serif;
   font-weight: 400px;
+  .container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fcfcfd;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap; 
+  color: gray;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
     }
 }
 
@@ -59,9 +176,10 @@ body {
   position: relative;
   width: 100%;
 }
-        .image {
+
+.image {
   display: block;
-  width: 70%;
+  width: 100%;
   height: auto;
 }
 
@@ -70,7 +188,7 @@ body {
   bottom: 100%;
   left: 0;
   right: 0;
-  background-color: #ffff;
+  background-color: #fcfcfd;
   overflow: hidden;
   width: 100%;
   height: 0;
@@ -81,13 +199,10 @@ body {
   bottom: 0;
   height: 100%;
 }
-        .text10{
-            background-color:#0099ff;
-        }
 
-    .text {
+.text {
   white-space: nowrap; 
-  color: rgb(83, 82, 82);
+  color: gray;
   font-size: 20px;
   position: absolute;
   overflow: hidden;
@@ -96,6 +211,10 @@ body {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
+        .text10{
+            background-color:#0099ff;
+        }
+
         
         h2{
             font-size: 2rem;
@@ -206,28 +325,42 @@ body {
         </section>
 
         <!-- Perbandingan Lingkungan Sekolah Sehat dan Tidak Sehat -->
-        <section id="perbandingan" class="text10">
-            <h2 class="textc">Perbandingan Lingkungan Sekolah Sehat dan Tidak Sehat</h2>
-            <div class="row">
-                <div class="text6">
-                    <h5>Lingkungan Sekolah Sehat</h5>
-                    <div class="container">
-                        <img src=https://1.bp.blogspot.com/--IHSE9EyPPE/XaWsk4uIPpI/AAAAAAAAT4A/pkND0YPHlYIFJQOGG9lZ80zZgjWhCUrGQCLcBGAsYHQ/s1600/belajar_hidup_sehat.jpg="Avatar" class="image">
-                        <div class="overlay">
-                          <div class="text">Lingkungan Sekolah sehat</div>
-                        </div>
-                      </div>
-                    <p>[Dampak lingkungan sehat di sini]</p>
-                </div>
-                <div class="col-md-6">
-                    <h5>Lingkungan Sekolah Tidak Sehat</h5>
-                    <img src="path_to_image_tidak_sehat.jpg" class="img-fluid" alt="Lingkungan Sekolah Tidak Sehat">
-                    <p>[Dampak lingkungan tidak sehat di sini]</p>
-                </div>
-            </div>
+    
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,32L40,37.3C80,43,160,53,240,90.7C320,128,400,192,480,186.7C560,181,640,107,720,112C800,117,880,203,960,208C1040,213,1120,139,1200,122.7C1280,107,1360,149,1400,170.7L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
         </section>
-
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Definisi Sekolah
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Kata sekolah berasal dari Bahasa Latin: <code>skhole, scola, scolae atau skhola</code> yang memiliki arti: waktu luang atau waktu senggang, di mana ketika itu sekolah adalah kegiatan pada waktu luang bagi anak-anak di tengah-tengah kegiatan utama mereka, yaitu bermain dan menghabiskan waktu untuk menikmati masa anak-anak dan remaja. Kegiatan dalam waktu luang itu adalah mempelajari cara berhitung, cara membaca huruf dan mengenal tentang moral (budi pekerti) dan estetika (seni). Untuk mendampingi dalam kegiatan scola anak-anak didampingi oleh orang ahli dan mengerti tentang psikologi anak, sehingga memberikan kesempatan yang sebesar-besarnya kepada anak untuk menciptakan sendiri dunianya melalui berbagai pelajaran di atas.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Sekolah Sehat
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Sekolah sehat pada prinsipnya terfokus pada usaha bagaimana membuat sekolah tersebut memiliki kondisi lingkungan belajar yang normal (tidak sakit) baik secara jasmani maupun rohani. Hal ini ditandai dengan situasi sekolah yang bersih, indah, tertib, dan menjunjung tinggi nilai-nilai kekeluargaan dalam kerangka mencapai kesejah­teraan lahir dan batin setiap warga sekolah. Dengan begitu, sekolah sehat memung­kinkan setiap warganya dapat melakukan aktivitas yang bermanfaat, berdaya guna dan berhasil guna untuk sekolah tersebut dan lingkungan di luar sekolah</div>
+               
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Accordion Item #3
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+              </div>
+            </div>
+          </div>
         <!-- Mini Game -->
         <section class="text4">
             <h2>Mini Game Lingkungan Sehat</h2>
