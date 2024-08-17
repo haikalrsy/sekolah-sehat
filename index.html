@@ -45,15 +45,70 @@ body {
   font-weight: 400px;
   font-style: italic;
             text-wrap: balance;
+            transition: width 2s linear 1s;
         }
         .text1{
-            background-color: greenyellow;
+            background-color:#D0F0C0;
+            transition: width 2s linear 1s;
         }
+        .text2{
+            background-color: #fffbfb;
+            color: #707070;
+        }
+        .container {
+  position: relative;
+  width: 100%;
+}
+        .image {
+  display: block;
+  width: 70%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #ffff;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+        .text10{
+            background-color:#0099ff;
+        }
+
+    .text {
+  white-space: nowrap; 
+  color: rgb(83, 82, 82);
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+        
         h2{
             font-size: 2rem;
             text-wrap: balance;
             font-family: "Playfair Display", serif;
   font-weight: 400px;
+  transition: width 2s linear 1s;
+        }
+        .textc{
+            background-color: #0099ff;
+        }
+        .text4{
+            background-color: #ffff;
         }
             .navbar {
             background: linear-gradient(to right, #5B99C2, #03346E);
@@ -93,7 +148,7 @@ body {
             width: 100%;
             height: 700px;
             gap: 2px;
-            background-color: rgb(156, 199, 236);
+            background-color:#D0F0C0;
         }
         @media (max-width: 576px) {
             model-viewer {
@@ -138,37 +193,43 @@ body {
         <section id="definisi" class="text1">
             <h2>Definisi Gerakan Lingkungan Sehat</h2>
             <!-- Object 3D menggunakan model-viewer -->
-            <model-viewer src="lomba[1].glb" alt="Model 3D" auto-rotate camera-controls ></model-viewer>
+            <model-viewer src="lomba[1].glb" alt="Model 3D "class="model1" auto-rotate camera-controls ></model-viewer>
             <p class="text5">Gerakan lingkungan sehat adalah pendekatan proaktif yang bertujuan untuk menjaga dan meningkatkan kualitas lingkungan kita agar lebih bersih, aman, dan sehat.<br> Ini mencakup berbagai inisiatif dan praktik yang mendukung keberlanjutan dan kesejahteraan manusia serta ekosistem sekitar.
             </p>
         </section>
 
         <!-- Materi Lingkungan Sekolah Sehat dan Tidak Sehat -->
-        <section id="materi" class="body">
+        <section id="materi" class="text2">
             <h2>Materi Lingkungan Sekolah Sehat</h2>
-            <p class="text2">Lingkungan sekolah sehat meliputi aspek-aspek seperti kebersihan, ventilasi yang baik, pencahayaan yang memadai, dan fasilitas sanitasi yang memadai.<br>Ini berkontribusi pada kesejahteraan siswa dan staf, serta meningkatkan konsentrasi dan hasil belajar.</p>
-       
+            <p class="text2">Lingkungan sekolah sehat meliputi aspek-aspek seperti kebersihan, ventilasi yang baik, pencahayaan yang memadai, dan fasilitas sanitasi yang memadai.<br>Ini berkontribusi pada kesejahteraan siswa dan staf, serta meningkatkan konsentrasi dan hasil belajar<br>Ada tiga prioritas yang perlu dicapai melalui kampanye Sekolah Sehat, yaitu sehat bergizi, sehat fisik, dan sehat imunisasi.<br> Sehat bergizi diperoleh dengan memberikan pemahaman gizi seimbang melalui Isi Piringku dengan pembiasaan makan dan minum dengan gizi seimbang; dan menghindari/meminimalisir konsumsi makanan cepat saji, makanan/minuman yang berpemanis, berpengawet, kuang serat, tinggi gula, garam, dan lemak; serta dengan pembiasaan kantin sehat..</p>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,32L40,37.3C80,43,160,53,240,90.7C320,128,400,192,480,186.7C560,181,640,107,720,112C800,117,880,203,960,208C1040,213,1120,139,1200,122.7C1280,107,1360,149,1400,170.7L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
         </section>
 
         <!-- Perbandingan Lingkungan Sekolah Sehat dan Tidak Sehat -->
-        <section id="perbandingan" class="body">
-            <h2>Perbandingan Lingkungan Sekolah Sehat dan Tidak Sehat</h2>
+        <section id="perbandingan" class="text10">
+            <h2 class="textc">Perbandingan Lingkungan Sekolah Sehat dan Tidak Sehat</h2>
             <div class="row">
-                <div class="col-md-6">
-                    <h3>Lingkungan Sekolah Sehat</h3>
-                    <img src="https://4.bp.blogspot.com/-bVbMf_Wchlc/W_o4uElqe4I/AAAAAAAAAEQ/YpNvu3kT09w5QvIPiBTFtpsz0aNr0afYgCEwYBhgL/s1600/gambar%2B4.png" class="img-fluid" alt="Lingkungan Sekolah Sehat">
+                <div class="text6">
+                    <h5>Lingkungan Sekolah Sehat</h5>
+                    <div class="container">
+                        <img src=https://1.bp.blogspot.com/--IHSE9EyPPE/XaWsk4uIPpI/AAAAAAAAT4A/pkND0YPHlYIFJQOGG9lZ80zZgjWhCUrGQCLcBGAsYHQ/s1600/belajar_hidup_sehat.jpg="Avatar" class="image">
+                        <div class="overlay">
+                          <div class="text">Lingkungan Sekolah sehat</div>
+                        </div>
+                      </div>
                     <p>[Dampak lingkungan sehat di sini]</p>
                 </div>
                 <div class="col-md-6">
-                    <h3>Lingkungan Sekolah Tidak Sehat</h3>
+                    <h5>Lingkungan Sekolah Tidak Sehat</h5>
                     <img src="path_to_image_tidak_sehat.jpg" class="img-fluid" alt="Lingkungan Sekolah Tidak Sehat">
                     <p>[Dampak lingkungan tidak sehat di sini]</p>
                 </div>
             </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,32L40,37.3C80,43,160,53,240,90.7C320,128,400,192,480,186.7C560,181,640,107,720,112C800,117,880,203,960,208C1040,213,1120,139,1200,122.7C1280,107,1360,149,1400,170.7L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
         </section>
 
         <!-- Mini Game -->
-        <section class="my-5">
+        <section class="text4">
             <h2>Mini Game Lingkungan Sehat</h2>
             <p>Anda bisa memainkan mini game ini di halaman berikut: <a href="minigame.html">Mainkan Game</a></p>
             <!-- Menambahkan Model 3D di sini -->
