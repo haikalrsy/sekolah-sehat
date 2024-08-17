@@ -1,0 +1,23 @@
+body {
+    background-color: #e8f5e9; /* Warna hijau kebersihan */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.container {
+    text-align: center;
+    margin: 20px;
+}
+.btn-custom {
+    background-color: #56ab2f;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn-custom:hover {
+    background-color: #a8e063;
+    text-decoration: none;
+}
