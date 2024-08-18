@@ -7,6 +7,8 @@
     <!-- Bootstrap CSS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/loaders/GLTFLoader.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
@@ -332,7 +334,9 @@ body {
     opacity: 1; /* Munculkan teks */
     transform: translate(-50%, -60%); /* Geser teks sedikit ke atas */
 }
-
+.accordionaccordion-flush{
+  background-color: #0099ff;
+}
 
     </style>
 </head>
@@ -371,7 +375,7 @@ body {
         <section id="definisi" class="text1">
             <h2>Definisi Gerakan Lingkungan Sehat</h2>
             <!-- Object 3D menggunakan model-viewer -->
-            <model-viewer src="lomba.glb" alt="Model 3D "class="model1" auto-rotate camera-controls ></model-viewer>
+            <model-viewer src="lomba[1].glb" alt="Model 3D "class="model1" auto-rotate camera-controls ></model-viewer>
             <p class="text5">Gerakan lingkungan sehat adalah pendekatan proaktif yang bertujuan untuk menjaga dan meningkatkan kualitas lingkungan kita agar lebih bersih, aman, dan sehat.<br> Ini mencakup berbagai inisiatif dan praktik yang mendukung keberlanjutan dan kesejahteraan manusia serta ekosistem sekitar.
             </p>
         </section>
@@ -382,7 +386,6 @@ body {
             <p class="text2">Lingkungan sekolah sehat meliputi aspek-aspek seperti kebersihan, ventilasi yang baik, pencahayaan yang memadai, dan fasilitas sanitasi yang memadai.<br>Ini berkontribusi pada kesejahteraan siswa dan staf, serta meningkatkan konsentrasi dan hasil belajar<br>Ada tiga prioritas yang perlu dicapai melalui kampanye Sekolah Sehat, yaitu sehat bergizi, sehat fisik, dan sehat imunisasi.<br> Sehat bergizi diperoleh dengan memberikan pemahaman gizi seimbang melalui Isi Piringku dengan pembiasaan makan dan minum dengan gizi seimbang; dan menghindari/meminimalisir konsumsi makanan cepat saji, makanan/minuman yang berpemanis, berpengawet, kuang serat, tinggi gula, garam, dan lemak; serta dengan pembiasaan kantin sehat..</p>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,32L40,37.3C80,43,160,53,240,90.7C320,128,400,192,480,186.7C560,181,640,107,720,112C800,117,880,203,960,208C1040,213,1120,139,1200,122.7C1280,107,1360,149,1400,170.7L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
         </section>
-
         <!-- Perbandingan Lingkungan Sekolah Sehat dan Tidak Sehat -->
         </section>
         <div class="accordion accordion-flush" id="accordion">
@@ -431,14 +434,15 @@ body {
             <p>Anda bisa memainkan mini game ini di halaman berikut: <a href="minigame.html">Mainkan Game</a></p>
             <!-- Menambahkan Model 3D di sini -->
             <div id="">
+              <script src="app.js"></script>
             <model-viewer src="sampah[1].glb" alt="Model Game 3D"class="model2" auto-rotate camera-controls></model-viewer>
-            <script src="app.js"></script>
+            
           </div>
         </section>
 
         <!-- Video YouTube -->
         <section id="video" class="my-5">
-            <h2>Video Lingkungan Sehat</h2>
+            <h2 class="shadow-lg p-3 mb-5 bg-body rounded">Video Lingkungan Sehat</h2>
             <div class="embed-responsive embed-responsive-16by9">
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/example_video_id" allowfullscreen></iframe>
             </div>
@@ -489,6 +493,49 @@ body {
             </div>
         </section>
     </div>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<div class="container mt-5">
+    <h1 class="mb-4">Gerakan Sekolah Sehat</h1>
+
+    <!-- Card: Lingkungan Fisik yang Tidak Sehat -->
+    <div class="card mb-3">
+        <div class="card-header bg-danger text-white">
+            Sekolah 
+        </div>
+        <div class="card-body">
+            <div class="alert alert-warning" role="alert">
+                <strong>Sumber:</strong> Wikipedia, 2024.
+            </div>
+        </div>
+    </div>
+
+    <!-- Card: Tekanan Akademis Berlebihan -->
+    <div class="card mb-3">
+        <div class="card-header bg-warning text-white">
+           Sekolah Sehat 
+        </div>
+        <div class="card-body">
+            <div class="alert alert-warning" role="alert">
+                <strong>Sumber:</strong> Kemendikbud RI, 2023.
+            </div>
+        </div>
+    </div>
+
+    <!-- Card: Lingkungan Sosial yang Tidak Mendukung -->
+    <div class="card mb-3">
+        <div class="card-header bg-info text-white">
+            Sekolah Tidak Sehat
+        </div>
+        <div class="card-body">
+            <div class="alert alert-warning" role="alert">
+                <strong>Sumber:</strong> Chat Gpt, 2024.
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+
 
     <!-- Footer -->
     <footer class="text-center">
@@ -498,7 +545,7 @@ body {
         <div class="footer-content">
             <!-- SVG di Footer -->
            
-            <div class="footer-text">Hak Cipta © 2024. Semua Hak Dilindungi.</div>
+            <div class="footer-text"> Kelompok 3 © 2024. Semua Hak Dilindungi.</div>
         </div>
     </footer>
 
