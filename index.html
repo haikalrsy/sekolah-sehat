@@ -385,9 +385,6 @@ background-image: image-set('Sekolah Tidak Sehat.gif');
             </div>
         </div>
     </nav>
-     <div id="root">
-    <button id="play-audio-button">Click To Play Music</button>
-  </div>
     <div class="content container">
         <!-- Definisi -->
         <section id="definisi" class="text1">
@@ -583,34 +580,6 @@ background-image: image-set('Sekolah Tidak Sehat.gif');
             }
         });
     </script>
-      <script>
-   // Referensi elemen audio dan tombol
-    const audio = document.getElementById('background-audio');
-    const playButton = document.getElementById('play-audio-button');
-
-    // Fungsi untuk memutar audio
-    function playAudio() {
-      audio.play()
-        .then(() => {
-          console.log('Audio diputar');
-        })
-        .catch((error) => {
-          console.log('Autoplay gagal:', error);
-        });
-    }
-
-    // Tambahkan event listener ke tombol
-    playButton.addEventListener('click', () => {
-      playAudio();
-      playButton.style.display = 'none'; // Sembunyikan tombol setelah audio diputar
-    });
-  </script>
     <script src="app.js"></script>
-
-  <!-- Elemen audio dengan autoplay dan loop -->
-  <audio id="background-audio" loop style="display:none;">
-    <source src="bgm.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
 </body>
 </html>
