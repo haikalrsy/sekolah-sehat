@@ -385,6 +385,9 @@ background-image: image-set('Sekolah Tidak Sehat.gif');
             </div>
         </div>
     </nav>
+     <div id="root">
+    <button id="play-audio-button">Click To Play Music</button>
+  </div>
     <div class="content container">
         <!-- Definisi -->
         <section id="definisi" class="text1">
@@ -581,32 +584,26 @@ background-image: image-set('Sekolah Tidak Sehat.gif');
         });
     </script>
       <script>
-    // Referensi elemen audioconst audio = document.getElementById('background-audio');
+   // Referensi elemen audio dan tombol
+    const audio = document.getElementById('background-audio');
+    const playButton = document.getElementById('play-audio-button');
 
-    // Fungsi untuk meminta izin dan memutar audio
+    // Fungsi untuk memutar audio
     function playAudio() {
-      if (typeof audio !== 'undefined' && audio) {
-        // Minta izin untuk memutar audio
-        const playPromise = audio.play();
-        if (playPromise !== undefined) {
-          playPromise
-            .then(() => {
-              console.log('Audio diputar otomatis');
-            })
-            .catch((error) => {
-              console.log('Autoplay ditolak, menunggu interaksi pengguna:', error);
-              // Jika autoplay ditolak, tampilkan tombol yang meminta pengguna untuk memulai audio
-              alert("Please click anywhere on the page to enable sound.");
-              document.body.addEventListener('click', () => {
-                audio.play();
-              }, { once: true });
-            });
-        }
-      }
+      audio.play()
+        .then(() => {
+          console.log('Audio diputar');
+        })
+        .catch((error) => {
+          console.log('Autoplay gagal:', error);
+        });
     }
 
-    // Panggil fungsi playAudio saat halaman selesai dimuat
-    window.addEventListener('load', playAudio);
+    // Tambahkan event listener ke tombol
+    playButton.addEventListener('click', () => {
+      playAudio();
+      playButton.style.display = 'none'; // Sembunyikan tombol setelah audio diputar
+    });
   </script>
     <script src="app.js"></script>
 
