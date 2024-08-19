@@ -385,6 +385,13 @@ background-image: image-set('Sekolah Tidak Sehat.gif');
             </div>
         </div>
     </nav>
+    <div id="root"></div>
+
+  <!-- Elemen audio dengan autoplay dan loop -->
+  <audio id="background-audio" loop>
+    <source src="bgm well.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
     <div class="content container">
         <!-- Definisi -->
         <section id="definisi" class="text1">
@@ -580,6 +587,34 @@ background-image: image-set('Sekolah Tidak Sehat.gif');
             }
         });
     </script>
+      <script>
+    // Referensi elemen audio
+    const audio = document.getElementById('background-audio');
+
+    // Fungsi untuk meminta izin dan memutar audio
+    function playAudio() {
+      if (typeof audio !== 'undefined' && audio) {
+        // Minta izin untuk memutar audio
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => {
+              console.log('Audio diputar otomatis');
+            })
+            .catch((error) => {
+              console.log('Pengguna belum memberi izin untuk memutar audio:', error);
+              // Misalnya, tambahkan UI untuk pengguna mengklik dan memulai audio
+              document.body.addEventListener('click', () => {
+                audio.play();
+              });
+            });
+        }
+      }
+    }
+
+    // Panggil fungsi playAudio saat halaman selesai dimuat
+    window.addEventListener('load', playAudio);
+  </script>
     <script src="app.js"></script>
 </body>
 </html>
