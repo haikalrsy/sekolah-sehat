@@ -581,8 +581,7 @@ background-image: image-set('Sekolah Tidak Sehat.gif');
         });
     </script>
       <script>
-    // Referensi elemen audio
-    const audio = document.getElementById('background-audio');
+    // Referensi elemen audioconst audio = document.getElementById('background-audio');
 
     // Fungsi untuk meminta izin dan memutar audio
     function playAudio() {
@@ -595,11 +594,12 @@ background-image: image-set('Sekolah Tidak Sehat.gif');
               console.log('Audio diputar otomatis');
             })
             .catch((error) => {
-              console.log('Pengguna belum memberi izin untuk memutar audio:', error);
-              // Misalnya, tambahkan UI untuk pengguna mengklik dan memulai audio
+              console.log('Autoplay ditolak, menunggu interaksi pengguna:', error);
+              // Jika autoplay ditolak, tampilkan tombol yang meminta pengguna untuk memulai audio
+              alert("Please click anywhere on the page to enable sound.");
               document.body.addEventListener('click', () => {
                 audio.play();
-              });
+              }, { once: true });
             });
         }
       }
@@ -609,10 +609,9 @@ background-image: image-set('Sekolah Tidak Sehat.gif');
     window.addEventListener('load', playAudio);
   </script>
     <script src="app.js"></script>
-    <div id="root"></div>
 
   <!-- Elemen audio dengan autoplay dan loop -->
-  <audio id="background-audio" loop>
+  <audio id="background-audio" loop style="display:none;">
     <source src="bgm.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
