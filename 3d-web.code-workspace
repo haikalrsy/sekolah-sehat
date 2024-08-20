@@ -1,0 +1,16 @@
+{
+  "folders": [
+	{
+		"path": "../../3d-web"
+	},
+	{
+		"path": "../../../Desktop/New folder"
+	},
+	{
+		"path": "."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "3d-web"
+  }
+}
