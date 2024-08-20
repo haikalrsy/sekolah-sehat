@@ -92,6 +92,51 @@ body {
   bottom: 0;
   height: 100%;
 }
+/* styles.css */
+@keyframes wipeIn {
+  0% {
+    transform: translateX(-100%);
+    width: 0;
+  }
+  100% {
+    transform: translateX(0);
+    width: 100%;
+  }
+}
+
+@keyframes wipeOut {
+  0% {
+    transform: translateX(0);
+    width: 100%;
+  }
+  100% {
+    transform: translateX(100%);
+    width: 0;
+  }
+}
+
+.wipe-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.wipe-content {
+  position: relative;
+  display: inline-block;
+  background-color: #3b82f6; /* Tailwind blue-500 */
+  color: #fff; /* Tailwind text-white */
+  padding: 1.5rem; /* Tailwind p-6 */
+  border-radius: 0.5rem; /* Tailwind rounded-lg */
+  transition: transform 0.5s ease, width 0.5s ease;
+}
+
+.wipe-container:hover .wipe-content {
+  animation: wipeIn 0.5s ease-out forwards;
+}
+
+.wipe-container.wipe-out .wipe-content {
+  animation: wipeOut 0.5s ease-in forwards;
+}
 
 .text {
   white-space: nowrap; 
@@ -445,6 +490,8 @@ background-image: image-set('Environment.gif');
         </section>
         <!-- Perbandingan Lingkungan Sekolah Sehat dan Tidak Sehat -->
         </section>
+        <div class="wipe-container">
+    <div class="wipe-content">
         <section id="Perbandingan" class="text3">
         <div class="accordion accordion-flush" id="accordion">
             <div class="accordion-item">
@@ -485,6 +532,8 @@ background-image: image-set('Environment.gif');
               </div>
             </div>
           </div>
+        </div>
+    </div>
         </div>
     </section>
         <!-- Mini Game -->
